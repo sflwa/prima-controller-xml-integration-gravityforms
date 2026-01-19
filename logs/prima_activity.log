@@ -1,0 +1,128 @@
+[2026-01-19 13:25:30] Resident Found: Address 7525 Northport Drive mapped to UsrID 1283 | Payload: None 
+[2026-01-19 13:34:10] Resident Found: Address 7525 Northport Drive mapped to UsrID 1283 | Payload: None 
+[2026-01-19 13:36:13] Resident Found: Address 7525 Northport Drive mapped to UsrID 1283 (WordPress Test) | Payload: None 
+[2026-01-19 13:44:37] DEBUG: Sending XML | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+		<requests>
+			<request name="ReadUsers">
+				<param name="Range" value="All-preview"/>
+				<param name="Filter" value="7525 Northport Drive"/>
+				<param name="FilterFields" value="UsrAddress"/>
+			</request>
+		</requests>
+[2026-01-19 13:44:38] DEBUG: Received Response | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+<responses>
+<response name="ReadUsers" status="0" message="OK.">
+<data>
+<user UsrID="1283" UsrName="WordPress" UsrLastName="Test" UsrAddress="7525 Northport Drive" UsrValidFrom="2026-01-19 00:00:00" UsrValidTo="2035-01-01 12:00:00" />
+</data>
+</response>
+</responses>
+[2026-01-19 13:44:38] Resident Found: Address 7525 Northport Drive mapped to UsrID 1283 (WordPress Test)
+[2026-01-19 13:45:27] DEBUG: Sending XML | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+		<requests>
+			<request name="AddOrUpdateUser">
+				<param name="KeyColumns" value="UsrName, UsrLastName" />
+				<param name="UsrName" value="WordPress" />
+				<param name="UsrLastName" value="Test" />
+				<param name="UsrCards" value="35:101" />
+			</request>
+		</requests>
+[2026-01-19 13:45:28] DEBUG: Received Response | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+<responses>
+<response name="AddOrUpdateUser" status="8" message="Wrong parameters. KeyColumn: UsrName or UsrLastName or UsrEmployeeIN">
+</response>
+</responses>
+[2026-01-19 13:47:12] DEBUG: Sending XML | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+		<requests>
+			<request name="AddOrUpdateUser">
+				<param name="KeyColumns" value="UsrName" />
+				<param name="UsrName" value="WordPress" />
+				<param name="UsrLastName" value="Test" />
+				<param name="UsrCards" value="35:101" />
+			</request>
+		</requests>
+[2026-01-19 13:47:13] DEBUG: Received Response | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+<responses>
+<response name="AddOrUpdateUser" status="15" message="Device already in use. Failed to update user">
+</response>
+</responses>
+[2026-01-19 13:49:29] DEBUG: Sending XML | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+		<requests>
+			<request name="AddOrUpdateUser">
+				<param name="KeyColumns" value="UsrName" />
+				<param name="UsrName" value="WordPress" />
+				<param name="UsrLastName" value="Test" />
+				<param name="UsrCards" value="35101" />
+			</request>
+		</requests>
+[2026-01-19 13:49:31] DEBUG: Received Response | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+<responses>
+<response name="AddOrUpdateUser" status="0" message="OK.">
+<data>
+<UsrID>1283</UsrID>
+</data>
+</response>
+</responses>
+[2026-01-19 13:56:12] DEBUG: Sending XML | DATA: <?xml version="1.0" encoding="UTF-8" ?><requests><request name="ReadSystemInfo"></request></requests>
+[2026-01-19 13:56:14] DEBUG: Received Response | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+<responses>
+<response name="ReadSystemInfo" status="2" message="Session ID not valid or expired. ">
+</response>
+</responses>
+[2026-01-19 13:56:17] DEBUG: Sending XML | DATA: <?xml version="1.0" encoding="UTF-8" ?><requests><request name="ReadSystemInfo"></request></requests>
+[2026-01-19 13:56:19] DEBUG: Received Response | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+<responses>
+<response name="ReadSystemInfo" status="2" message="Session ID not valid or expired. ">
+</response>
+</responses>
+[2026-01-19 13:56:23] DEBUG: Sending XML | DATA: <?xml version="1.0" encoding="UTF-8" ?><requests><request name="ReadSystemInfo"></request></requests>
+[2026-01-19 13:56:24] DEBUG: Received Response | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+<responses>
+<response name="ReadSystemInfo" status="2" message="Session ID not valid or expired. ">
+</response>
+</responses>
+[2026-01-19 13:56:27] DEBUG: Sending XML | DATA: <?xml version="1.0" encoding="UTF-8" ?><requests><request name="ReadSystemInfo"></request></requests>
+[2026-01-19 13:56:29] DEBUG: Received Response | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+<responses>
+<response name="ReadSystemInfo" status="2" message="Session ID not valid or expired. ">
+</response>
+</responses>
+[2026-01-19 13:59:49] DEBUG: Sending XML | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+		<requests>
+			<request name="ReadSystemInfo"></request>
+		</requests>
+[2026-01-19 13:59:51] DEBUG: Received Response | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+<responses>
+<response name="ReadSystemInfo" status="2" message="Session ID not valid or expired. ">
+</response>
+</responses>
+[2026-01-19 14:00:14] DEBUG: Sending XML | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+		<requests>
+			<request name="ReadSystemInfo"></request>
+		</requests>
+[2026-01-19 14:00:16] DEBUG: Received Response | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+<responses>
+<response name="ReadSystemInfo" status="0" message="OK.">
+<data>
+<info NumberOfEvents="396472" OldestEvent="2016-09-12 08:38:41" NumberOfUsers="1069" NumberOfDoors="46" DiskFreeSpace="4.00 MB" DatabaseSize="39763968" DatabaseUsedSpace="0.40" ServerDateTime="2026-01-19 17:00:14" ServerDateTimeUTC="2026-01-19 14:00:14" ServerTimeZone="Prima/(UTC+03:00)_Baghdad" Uptime="25062264" LastManualBackupTime="2026-01-12 14:56:27" HwSerialNumber="5001"/>
+</data>
+</response>
+</responses>
+[2026-01-19 14:33:19] DEBUG: Sending XML | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+		<requests>
+			<request name="ReadUsers">
+				<param name="Range" value="All-preview"/>
+				<param name="Filter" value="7525 Northport Drive"/>
+				<param name="FilterFields" value="UsrAddress"/>
+			</request>
+		</requests>
+[2026-01-19 14:33:20] DEBUG: Received Response | DATA: <?xml version="1.0" encoding="UTF-8" ?>
+<responses>
+<response name="ReadUsers" status="0" message="OK.">
+<data>
+<user UsrID="1283" UsrName="WordPress" UsrLastName="Test" UsrAddress="7525 Northport Drive" UsrValidFrom="2026-01-19 00:00:00" UsrValidTo="2035-01-01 12:00:00" UsrCards="35101" />
+</data>
+</response>
+</responses>
+[2026-01-19 14:33:20] Resident Found: Address 7525 Northport Drive mapped to UsrID 1283 (WordPress Test)
+[2026-01-19 14:42:12] Resident Found: Address 7525 Northport Drive mapped to UsrID 1283 (WordPress Test)
