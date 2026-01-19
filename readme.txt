@@ -1,5 +1,5 @@
 === Sync Manager for Prima Controller and Gravity Forms ===
-Contributors: philip-l
+Contributors: sflwa
 Tags: prima nova, gravity forms, access control, rfid sync, automation
 Requires at least: 5.8
 Tested up to: 6.9
